@@ -1,0 +1,27 @@
+services:
+  # Application for Juice-shop
+  juice-shop:
+    image: bkimminich/juice-shop
+    container_name: juice-shop
+    environment:
+      - NODE_ENV=unsafe
+    ports:
+      - "3000:3000"
+    networks:
+      - pentest-juice-shop
+
+# Kali pentest env
+  kali:
+    build: .
+    container_name: kali-pentest
+    hostname: kali
+    stdin_open: true
+    tty: true
+    depends_on:
+      - juice-shop
+    networks:
+      - pentest-juice-shop
+
+networks:
+  pentest-juice-shop:
+    driver: bridge
