@@ -34,7 +34,7 @@ Pre-installed via `seclists` and `dirb` packages:
 - `/usr/share/wordlists/dirb/big.txt`
 
 
-# Prerequisites
+## Prerequisites
 
 - [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/)
 - A web browser and [Burp Suite](https://portswigger.net/burp) on your host machine for GUI-based testing
