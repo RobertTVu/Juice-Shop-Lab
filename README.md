@@ -77,7 +77,7 @@ Example commands are available inside the Kali container:
 
 ```bash
 cd /pentest
-./examples.sh
+cat examples.sh
 ```
 
 ## Disclaimer
