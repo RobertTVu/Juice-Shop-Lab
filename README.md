@@ -6,8 +6,8 @@ A Docker penetration testing environment for vulnerability analysis of [OWASP Ju
 
 This project provides a ready-to-use pentest lab using Docker Compose with two containers:
 
-- **Kali Linux** — Pre-installed with CLI-based security tools
-- **OWASP Juice Shop** — Intentionally vulnerable web application (target)
+- **Kali Linux** - Pre-installed with CLI-based security tools
+- **OWASP Juice Shop** - Intentionally vulnerable web application (target)
 
 
 Both containers run on a shared Docker network, allowing the Kali container to reach Juice Shop at `http://juice-shop:3000`.
