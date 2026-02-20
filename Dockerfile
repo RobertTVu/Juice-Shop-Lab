@@ -24,6 +24,7 @@ RUN apt install -y \
 # DAST Scan
 #------------------------
 RUN apt install -y nuclei 
+RUN nuclei -update-templates
 
 # Content Discovery
 #------------------------
@@ -48,10 +49,8 @@ RUN apt install -y hashcat hash-identifier
 
 RUN apt install -y seclists wordlists dirb
 
-
 # Clean up apt cache to reduce image size
 RUN apt clean && rm -rf /var/lib/apt/lists/*
-
 
 # Working directory
 WORKDIR /pentest
@@ -59,7 +58,6 @@ WORKDIR /pentest
 # Copy example commands
 COPY examples.sh /pentest/examples.sh
 RUN chmod +x /pentest/examples.sh
-
 
 # Env variables
 ENV LC_ALL=C.UTF-8
